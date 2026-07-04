@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Точка опоры — Лилия Гарипова, психолог-консультант</title>
+<style>
+  :root{
+    --bg:#faf7f2;
+    --dark:#2e2a26;
+    --accent:#8a6f5c;
+    --accent-light:#d9c7b8;
+    --card:#ffffff;
+    --muted:#6b645d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Georgia', 'Times New Roman', serif;
+    background:var(--bg);
+    color:var(--dark);
+    line-height:1.6;
+  }
+  a{text-decoration:none;color:inherit;}
+  .container{max-width:1000px;margin:0 auto;padding:0 24px;}
+  /* Header */
+  header{
+    position:sticky;top:0;background:rgba(250,247,242,0.95);
+    backdrop-filter:blur(6px);z-index:100;border-bottom:1px solid #eee2d6;
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .logo{font-size:22px;font-weight:bold;letter-spacing:0.5px;color:var(--accent);}
+  .nav-links{display:flex;gap:28px;font-size:15px;}
+  .nav-links a:hover{color:var(--accent);}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:30px;
+    background:var(--accent);color:#fff;font-size:15px;
+    transition:0.25s;border:none;cursor:pointer;
+  }
+  .btn:hover{background:#725847;}
+  .btn-outline{
+    background:transparent;border:1.5px solid var(--accent);color:var(--accent);
+  }
+  .btn-outline:hover{background:var(--accent);color:#fff;}
+  /* Hero */
+  .hero{
+    padding:90px 0 70px;text-align:center;
+    background:linear-gradient(180deg,#fff 0%, var(--bg) 100%);
+  }
+  .hero h1{
+    font-size:44px;max-width:780px;margin:0 auto 20px;
+    line-height:1.25;color:var(--dark);
+  }
+  .hero .accent-word{color:var(--accent);font-style:italic;}
+  .hero p.sub{
+    font-size:19px;color:var(--muted);max-width:620px;margin:0 auto 34px;
+  }
+  .hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  /* Sections */
+  section{padding:80px 0;}
+  h2{font-size:32px;text-align:center;margin-bottom:14px;}
+  .section-sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 50px;font-size:16px;}
+  /* About */
+  .about{display:flex;gap:50px;align-items:center;flex-wrap:wrap;}
+  .about-photo{
+    flex:1 1 260px;min-width:220px;height:320px;border-radius:16px;
+    background:var(--accent-light);
+    display:flex;align-items:center;justify-content:center;
+    color:#7a6a5c;font-size:15px;text-align:center;padding:20px;
+    border:2px dashed #c9b6a4;
+  }
+  .about-text{flex:2 1 400px;}
+  .about-text h3{font-size:26px;margin-bottom:16px;}
+  .about-text p{margin-bottom:16px;color:var(--muted);font-size:17px;}
+  .quote{
+    font-style:italic;border-left:3px solid var(--accent);
+    padding:10px 20px;margin:24px 0;color:var(--dark);font-size:18px;
+    background:#fff;border-radius:0 8px 8px 0;
+  }
+  /* Cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;}
+  .card{
+    background:var(--card);padding:32px 26px;border-radius:14px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.05);
+    transition:0.25s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+  .card .icon{font-size:30px;margin-bottom:14px;}
+  .card h4{font-size:19px;margin-bottom:10px;}
+  .card p{color:var(--muted);font-size:15px;}
+  /* Method / philosophy */
+  .method{background:#fff;}
+  .method-list{max-width:700px;margin:0 auto;}
+  .method-item{display:flex;gap:18px;margin-bottom:28px;align-items:flex-start;}
+  .method-num{
+    flex-shrink:0;width:42px;height:42px;border-radius:50%;
+    background:var(--accent-light);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;font-weight:bold;
+  }
+  .method-item p{color:var(--muted);font-size:16px;}
+  .method-item h4{font-size:18px;margin-bottom:4px;}
+  /* Format */
+  .format-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+  .format-card{
+    text-align:center;padding:30px 20px;background:var(--bg);border-radius:14px;
+    border:1px solid #eee2d6;
+  }
+  .format-card .num{font-size:28px;color:var(--accent);margin-bottom:8px;}
+  /* Channel promo */
+  .channel-block{
+    background:var(--dark);color:#f4ede6;border-radius:20px;
+    padding:60px 40px;text-align:center;
+  }
+  .channel-block h2{color:#fff;}
+  .channel-block p{color:#cfc4b8;max-width:560px;margin:0 auto 30px;font-size:16px;}
+  .channel-block .btn{background:var(--accent-light);color:var(--dark);}
+  .channel-block .btn:hover{background:#fff;}
+  /* Contact */
+  .contact{text-align:center;}
+  .contact-box{
+    max-width:520px;margin:0 auto;background:#fff;border-radius:16px;
+    padding:50px 36px;box-shadow:0 4px 18px rgba(0,0,0,0.05);
+  }
+  .contact-box p{color:var(--muted);margin-bottom:26px;}
+  footer{
+    text-align:center;padding:36px 0;color:var(--muted);font-size:14px;
+    border-top:1px solid #eee2d6;
+  }
+  @media(max-width:640px){
+    .nav-links{display:none;}
+    .hero h1{font-size:32px;}
+    h2{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">Точка опоры</div>
+    <nav class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#help">Как я помогаю</a>
+      <a href="#method">Подход</a>
+      <a href="#format">Формат</a>
+      <a href="#channel">Канал</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a href="https://t.me/Liliya8619" target="_blank" class="btn">Написать в Telegram</a>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1>Точка опоры — <span class="accent-word">психология</span>, которая держит на плаву</h1>
+    <p class="sub">Практикующий психолог-консультант Лилия Гарипова. Без готовых идеалов и «психо-жаргона» — только реальные инструменты, которые работают.</p>
+    <div class="hero-buttons">
+      <a href="https://t.me/Liliya8619" target="_blank" class="btn">Записаться на консультацию</a>
+      <a href="#channel" class="btn btn-outline">Читать канал в Telegram</a>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container about">
+    <div class="about-photo">Ваше фото<br>(добавите позже)</div>
+    <div class="about-text">
+      <h3>Обо мне</h3>
+      <p>Меня зовут Лилия Гарипова, я практикующий психолог-консультант. Пишу и работаю без пафоса и громких обещаний «всё наладить» — с уважением к вашему опыту и вашему темпу.</p>
+      <p>Здесь не стыдят за усталость, откладывание дел или трудность сказать «нет». Здесь ищут не идеальные ответы, а рабочие инструменты — то, что действительно помогает почувствовать опору под ногами.</p>
+      <div class="quote">«Устойчивость — не врождённая черта. Это навык. И его можно вырастить.»</div>
+      <p>Если вам ближе тихая честность, чем громкие советы — вы в нужном месте.</p>
+    </div>
+  </div>
+</section>
+<section id="help" style="background:#fff;">
+  <div class="container">
+    <h2>С чем я помогаю</h2>
+    <p class="section-sub">Реальные темы, с которыми чаще всего приходят на консультацию</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🌿</div>
+        <h4>Тревога и выгорание</h4>
+        <p>Работа с фоновой тревогой, истощением и хронической усталостью. Техники быстрой стабилизации и восстановления ресурса.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h4>Отношения и границы</h4>
+        <p>Как перестать быть «эхом» чужих ожиданий, выстраивать границы и оставаться собой в близких отношениях.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧭</div>
+        <h4>Кризис смысла и идентичности</h4>
+        <p>«Вроде всё есть, а внутри — пустота». Работа с кризисом среднего возраста и поиском опоры в переменах.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💛</div>
+        <h4>Стыд, самооценка, созависимость</h4>
+        <p>Мягкая работа с внутренним критиком, чувством вины и потребностью нравиться всем.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="method" class="method">
+  <div class="container">
+    <h2>Мой подход</h2>
+    <p class="section-sub">Без идеализации и токсичной позитивности — только то, что действительно работает</p>
+    <div class="method-list">
+      <div class="method-item">
+        <div class="method-num">1</div>
+        <div>
+          <h4>Никакого «просто думай позитивно»</h4>
+          <p>Принуждать себя к позитиву — это насилие над своими чувствами. Мы начинаем с признания того, что есть на самом деле.</p>
+        </div>
+      </div>
+      <div class="method-item">
+        <div class="method-num">2</div>
+        <div>
+          <h4>Рост — не линия вверх</h4>
+          <p>Откаты и возвращение старых реакций — не провал, а естественная часть пути. Психика не учится линейно.</p>
+        </div>
+      </div>
+      <div class="method-item">
+        <div class="method-num">3</div>
+        <div>
+          <h4>Практические инструменты</h4>
+          <p>Техники заземления, работы с дыханием и телом, которые можно применить уже сегодня — а не только разговоры «в целом».</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="format" style="background:#fff;">
+  <div class="container">
+    <h2>Формат работы</h2>
+    <p class="section-sub">Консультации онлайн, в удобном для вас темпе</p>
+    <div class="format-cards">
+      <div class="format-card">
+        <div class="num">💻</div>
+        <h4>Онлайн</h4>
+        <p>Формат видео- или аудио-звонка, из любой точки мира</p>
+      </div>
+      <div class="format-card">
+        <div class="num">🕐</div>
+        <h4>Индивидуально</h4>
+        <p>Темп и длительность работы обсуждаются лично</p>
+      </div>
+      <div class="format-card">
+        <div class="num">🔒</div>
+        <h4>Конфиденциально</h4>
+        <p>Всё, что обсуждается на консультации, остаётся между нами</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="channel">
+  <div class="container channel-block">
+    <h2>Канал «Точка опоры» в Telegram</h2>
+    <p>Бесплатные практики, разборы реальных ситуаций и честный взгляд на психологию — без идеализации и лишнего пафоса. Присоединяйтесь, если хотите разобраться в себе уже сейчас.</p>
+    <a href="https://t.me/psychology2025Liliya" target="_blank" class="btn">Подписаться на канал</a>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Готовы сделать первый шаг?</h2>
+      <p>Напишите мне в Telegram — расскажу подробнее о формате работы и отвечу на вопросы.</p>
+      <a href="https://t.me/Liliya8619" target="_blank" class="btn">Написать Лилии в Telegram</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>© 2026 Лилия Гарипова · Точка опоры</p>
+  </div>
+</footer>
+</body>
+</html>
