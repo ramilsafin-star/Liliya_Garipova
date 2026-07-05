@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ramilsafin-star.github.io/Liliya_Garipova/sitemap.xml
